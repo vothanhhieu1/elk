@@ -51,6 +51,8 @@ services:
     networks:
       - elk
       - ces_email_ces
+      - nexbus_api_nexbus
+      - ces_email_default
 
   kibana:
     build:
@@ -70,6 +72,10 @@ services:
 
 networks:
   ces_email_ces:
+    external: true
+  nexbus_api_nexbus:
+    external: true
+  ces_email_default:
     external: true
   elk:
     driver: bridge

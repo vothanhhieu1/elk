@@ -1,0 +1,10 @@
+# filebeat.yml
+filebeat:
+  prospectors:
+    -
+      paths:
+        - /var/log/your-app/app.*.log
+      input_type: log
+output:
+  logstash:
+    hosts: ["logstash:5000"]
