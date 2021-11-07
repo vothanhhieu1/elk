@@ -53,6 +53,7 @@ services:
       - ces_email_ces
       - nexbus_api_nexbus
       - ces_email_default
+      - b2b_api_default
 
   kibana:
     build:
@@ -76,6 +77,8 @@ networks:
   nexbus_api_nexbus:
     external: true
   ces_email_default:
+    external: true
+  b2b_api_default:
     external: true
   elk:
     driver: bridge
